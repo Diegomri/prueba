@@ -3,6 +3,12 @@
 import { Suspense } from 'react';
 import { useUtm } from '@/hooks/useUtm';
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, any>[];
+  }
+}
+
 function HomeContent() {
   const utms = useUtm();
 
